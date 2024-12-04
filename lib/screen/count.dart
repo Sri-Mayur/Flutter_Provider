@@ -49,3 +49,10 @@ class _CountExampleState extends State<CountExample> {
         ));
   }
 }
+/**
+ 1. NotifyListener: It is a widget that wraps the part of the UI that needs to be updated when the state changes. It listens for state changes and triggers a rebuild of the wrapped widget subtree.
+
+2. Provider.of<Class>(context): This syntax is used to access the provided instance of a specific class within the widget tree. It retrieves the nearest ancestor Provider widget of type Class and returns the instance.
+
+3. Consumer: It is a widget that allows accessing and using the provided data within its subtree. It receives the provided instance of a class and rebuilds its child widget tree when the state changes.
+ */
