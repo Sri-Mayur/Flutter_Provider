@@ -20,6 +20,13 @@ class _MyFavouriteScreenState extends State<MyFavouriteScreen> {
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.deepPurple,
+        actions: [
+          ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/theme');
+              },
+              child: Icon(Icons.turn_right_sharp)),
+        ],
       ),
       body: Consumer<FavouriteProvider>(builder: (context, value, child) {
         final favouriteItems = value.favlist;
