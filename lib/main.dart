@@ -3,6 +3,7 @@ import 'package:learning_provider/provider/favourite_provider.dart';
 import 'package:learning_provider/provider/slider_provider.dart';
 import 'package:learning_provider/provider/count_provider.dart';
 import 'package:learning_provider/provider/theme_provider.dart';
+import 'package:learning_provider/screen/favourite/favourite.dart';
 import 'package:learning_provider/screen/favourite/myfavourite.dart';
 import 'package:learning_provider/screen/slider.dart';
 import 'package:learning_provider/screen/count.dart';
@@ -33,14 +34,16 @@ class MyApp extends StatelessWidget {
             theme: themeChanger.darkTheme
                 ? ThemeData.dark()
                 : ThemeData(
-                    colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+                    colorScheme:
+                        ColorScheme.fromSeed(seedColor: Colors.deepPurple),
                     useMaterial3: true,
                   ),
-            home: const ThemeScreen(), // Default screen
+            home: const FavouriteExample(), // Default screen
             routes: {
               '/slider': (context) => const SliderExample(),
               '/count': (context) => const CountExample(),
               '/myFavourites': (context) => const MyFavouriteScreen(),
+              '/theme': (context) => const ThemeScreen(),
             },
           );
         },
